@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/png" href="../public/img/pokeball.png" />
+    <link rel="stylesheet" href="../public/css/reset.css" />
+    <link rel="stylesheet" href="../public/css/style.css" />
+
+    <title>Pokédex</title>
+  </head>
+
+  <body>
+    <header class="pure">
+      <h1 class="pure-menu_acceuil"><a href="./index.html">Pokédex</a></h1>
+      <nav class="pure-menu">
+        <ul class="pure-menu">
+          <li class="pure-menu_list"><a href="/list">Liste</a></li>
+          <li class="pure-menu_type"><a href="./type.html">Types</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="pokemon-card">
+        <div>
+          <h1 class="pokemon-card__title">Herbizarre</h1>
+        </div>
+        <section class="pokemon-card__section">
+          <img
+            class="pokemon-card__img"
+            src="../public/img/2.png"
+            alt="Herbizare"
+          />
+          <article class="pokemon-card__profil">
+            <header>
+              <h2 class="pokemon-card__name">#2 Herbizarre</h2>
+
+              <p class="pokemon-card__category plante">
+                <a href="#">Plante</a>
+              </p>
+              <p class="pokemon-card__category poisson">
+                <a href="#">Poissons</a>
+              </p>
+            </header>
+
+            <main>
+              <div class="card">
+                <h2 class="card_title">Statistiques</h2>
+                <div class="card-container">
+                  <div class="card_property">
+                    <p class="card_index">PV</p>
+                    <p class="card_number">60</p>
+                    <progress
+                      id="progress1"
+                      value="60"
+                      max="100"
+                      class="card_gauge"
+                    >
+                      60
+                    </progress>
+                  </div>
+                  <div class="card_property">
+                    <p class="card_index">Attaque</p>
+                    <p class="card_number">60</p>
+                    <progress
+                      id="progress2"
+                      value="60"
+                      max="100"
+                      class="card_gauge"
+                    >
+                      60
+                    </progress>
+                  </div>
+                  <div class="card_property">
+                    <p class="card_index">Défense</p>
+                    <p class="card_number">60</p>
+                    <progress
+                      id="progress3"
+                      value="60"
+                      max="100"
+                      class="card_gauge"
+                    >
+                      60
+                    </progress>
+                  </div>
+                  <div class="card_property">
+                    <p class="card_index">Attaque Spé.</p>
+                    <p class="card_number">60</p>
+                    <progress
+                      id="progress4"
+                      value="60"
+                      max="100"
+                      class="card_gauge"
+                    >
+                      60
+                    </progress>
+                  </div>
+                  <div class="card_property">
+                    <p class="card_index">Défense Spé.</p>
+                    <p class="card_number">60</p>
+                    <progress
+                      id="progress5"
+                      value="60"
+                      max="100"
+                      class="card_gauge"
+                    >
+                      60
+                    </progress>
+                  </div>
+                  <div class="card_property">
+                    <p class="card_index">Vitesse</p>
+                    <p class="card_number">60</p>
+                    <progress
+                      id="progress6"
+                      value="60"
+                      max="100"
+                      class="card_gauge"
+                    >
+                      60
+                    </progress>
+                  </div>
+                </div>
+              </div>
+            </main>
+          </article>
+        </section>
+        <a class="footer" href="">Revenir a la liste</a>
+      </div>
+    </main>
+    <footer class="footer">
+      <p>©️ - 2023 - Tout droits réservé - Pokédex</p>
+    </footer>
+  </body>
+</html>
