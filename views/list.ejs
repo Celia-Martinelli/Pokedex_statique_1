@@ -1,0 +1,26 @@
+<%- include('partials/header') %>
+
+
+<main>
+  <div>
+    <h2 class="pokemon-type__list">Liste des Pokemons de type <%= type %></h1>
+  </div>
+
+  <div class="pokemon_container">
+    <% for (const pokemon of pokemons) { %>
+      <div class="pokemon_item">
+        <a href="/pokemon/<%= pokemon.numero %>">
+            <img
+              class="pokemon_item__img"
+              src="/img/<%= pokemon.numero %>.png"
+              alt="<%= pokemon.nom %>"
+            />
+            <p class="pokemon_item__tittle">#<%= pokemon.numero %>
+              <%= pokemon.nom %>
+            </p>
+          </a>
+      </div>
+    <% } %>
+</div>
+</main>
+<%- include('partials/footer') %>

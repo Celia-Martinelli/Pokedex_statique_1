@@ -156,7 +156,7 @@ img.pokemon-card__img {
 .eau {
   background-color: #3399ff;
 }
-.electrik {
+.électrik {
   background-color: #ffbb33;
 }
 .feu {
@@ -171,7 +171,7 @@ img.pokemon-card__img {
 .normal {
   background-color: #bbaabb;
 }
-.poisson {
+.poison {
   background-color: #aa5599;
 }
 .psy {
@@ -193,6 +193,7 @@ img.pokemon-card__img {
   background-color: #6599ff;
 }
 
+
 /*! ==== TYPE ==== */
 
 .types_title {
@@ -213,6 +214,12 @@ img.pokemon-card__img {
   margin: 0.3em;
   padding: 1.5em 4em;
   border-radius: 5px;
+}
+
+.pokemon-type__list{
+  text-align: center;
+  font-size: 3em;
+  margin: 1em;
 }
 
 /*! ==== FOOTER ==== */

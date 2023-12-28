@@ -1,0 +1,19 @@
+<%- include('partials/header') %>
+
+<main class="types">
+  <h1 class="types_title">
+    Cliquez sur un type pour voir tous les Pokémon de ce type
+  </h1>
+  <section class="types_container">
+    <% const displayedTypes = []; %>
+    <% for (const pokemon of pokemons) { %>
+      <% for (const type of pokemon.type) { %>
+        <% if (!displayedTypes.includes(type)) { %>
+          <a href="/type/<%= pokemon.type %>" class="types_pokemon <%=type.toLowerCase()%>"><%=type%></a>
+          <% displayedTypes.push(type); %>
+        <% } %>
+      <% } %>
+      <% } %>
+  </section>
+</main>
+<%- include('partials/footer') %>

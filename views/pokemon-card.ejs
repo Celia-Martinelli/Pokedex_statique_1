@@ -3,24 +3,23 @@
 <main>
   <div class="pokemon-card">
     <div>
-      <h1 class="pokemon-card__title">Herbizarre</h1>
+      <h1 class="pokemon-card__title"><%= locals.pokemon.nom %></h1>
     </div>
     <section class="pokemon-card__section">
       <img
         class="pokemon-card__img"
-        src="../public/img/2.png"
-        alt="Herbizare"
+        src="/img/<%= locals.pokemon.numero %>.png"
+        alt="<%= locals.pokemon.nom %>"
       />
       <article class="pokemon-card__profil">
         <header>
-          <h2 class="pokemon-card__name">#2 Herbizarre</h2>
+          <h2 class="pokemon-card__name">#<%= locals.pokemon.numero %> <%= locals.pokemon.nom %></h2>
 
-          <p class="pokemon-card__category plante">
-            <a href="#">Plante</a>
-          </p>
-          <p class="pokemon-card__category poisson">
-            <a href="#">Poissons</a>
-          </p>
+          <% locals.pokemon.type.forEach((type)=>{ %>
+            <p class="pokemon-card__category <%=type.toLowerCase()%>">
+            <a href="/type/<%= type %>"><%= type %></a>
+            </p>
+        <% }) %>
         </header>
 
         <main>
@@ -31,84 +30,78 @@
               <div class="card_property">
                 <p class="card_index">PV</p>
                 <div class="card-container__child">
-                <p class="card_number">60</p>
+                <p class="card_number"><%= locals.pokemon.pv %> </p>
                 <progress
                   id="progress1"
-                  value="60"
+                  value="<%= locals.pokemon.pv %>"
                   max="100"
                   class="card_gauge"
                 >
-                  60
                 </progress>
                 </div>
               </div>
               <div class="card_property">
                 <p class="card_index">Attaque</p>
                 <div class="card-container__child">
-                <p class="card_number">60</p>
+                <p class="card_number"><%= locals.pokemon.attaque %></p>
                 <progress
                   id="progress2"
-                  value="60"
+                  value="<%= locals.pokemon.attaque %>"
                   max="100"
                   class="card_gauge"
                 >
-                  60
                 </progress>
                 </div>
               </div>
               <div class="card_property">
                 <p class="card_index">Défense</p>
                 <div class="card-container__child">
-                <p class="card_number">60</p>
+                <p class="card_number"><%= locals.pokemon.defense %></p>
                 <progress
                   id="progress3"
-                  value="60"
+                  value="<%= locals.pokemon.defense %>"
                   max="100"
                   class="card_gauge"
                 >
-                  60
                 </progress>
                 </div>
               </div>
               <div class="card_property">
                 <p class="card_index">Attaque Spé.</p>
                 <div class="card-container__child">
-                <p class="card_number">60</p>
+                <p class="card_number"><%= locals.pokemon.attaque_spe %></p>
                 <progress
                   id="progress4"
-                  value="60"
+                  value="<%= locals.pokemon.attaque_spe %>"
                   max="100"
                   class="card_gauge"
                 >
-                  60
                 </progress>
               </div>
               </div>
               <div class="card_property">
                 <p class="card_index">Défense Spé.</p>
                 <div class="card-container__child">
-                <p class="card_number">60</p>
+                <p class="card_number"><%= locals.pokemon.defense_spe %></p>
                 <progress
                   id="progress5"
-                  value="60"
+                  value="<%= locals.pokemon.defense_spe %>"
                   max="100"
                   class="card_gauge"
                 >
-                  60
                 </progress>
                 </div>
               </div>
               <div class="card_property">
                 <p class="card_index">Vitesse</p>
                 <div class="card-container__child">
-                <p class="card_number">60</p>
+                <p class="card_number"><%= locals.pokemon.vitesse %></p>
                 <progress
                   id="progress6"
-                  value="60"
+                  value="<%= locals.pokemon.vitesse %>"
                   max="100"
                   class="card_gauge"
                 >
-                  60
                 </progress>
                 </div>
               </div>
@@ -118,7 +111,7 @@
         </main>
       </article>
     </section>
-    <a class="footer" href="">Revenir a la liste</a>
+    <a class="footer" href="/">Revenir a la liste</a>
   </div>
 </main>
  <%- include('partials/footer') %>

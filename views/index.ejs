@@ -1,16 +1,22 @@
 <%- include('partials/header') %>
 <main>
   <div class="pokemon_container">
+
+    <% for(const pokemon of locals.pokemons){ %>
     <div class="pokemon_item">
-      <a href="./pokemon-card.ejs">
+      <a href="/pokemon/<%= pokemon.numero %>">
         <img
           class="pokemon_item__img"
-          src="../../public/img/1.png"
-          alt="Bulbizarre"
+          src="/img/<%= pokemon.numero %>.png"
+          alt="<%= pokemon.nom %>"
         />
-        <p class="pokemon_item__tittle">#1 Bulbizarre</p>
+        <p class="pokemon_item__tittle">#<%= pokemon.numero %>
+          <%= pokemon.nom %>
+        </p>
       </a>
     </div>
+    <% } %>
+
   </div>
 </main>
 <%- include('partials/footer') %>
